@@ -1,0 +1,17 @@
+﻿@model Vidlily.Models.ViewModel.MovieListViewModel
+@{
+    ViewBag.Title = "List";
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies</h2>
+
+<table class=“table table-bordered table-hover”>
+    @foreach (var movie in Model.Movies)
+    {
+       /* @Html.ActionLink(movie.Name, "Index", "Movies", new { id = movie.Id }, null)*/
+       <tr>@movie.Name</tr>
+    }
+</table>
+
